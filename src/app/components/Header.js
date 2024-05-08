@@ -5,7 +5,7 @@ import "../css/header.css";
 
 export default async function Header() {
   const res = await fetch(
-    "http://abrnextjs.local/wp-json/menus/v1/menus/primarymenu",
+    "https://webangon.com/abr/wp-json/menus/v1/menus/primarymenu",
     { cache: "no-store" }
   );
   const data = await res.json();
@@ -138,7 +138,7 @@ export default async function Header() {
               {data.items.map((item) => {
                 const title = item.title;
                 const childItems = item.child_items;
-                const url = item.url.replace("http://abrnextjs.local", "");
+                const url = item.url.replace("https://webangon.com/abr", "");
                 const sub_class = childItems ? "sub-menu" : "no-sub";
                 if (item.child_items) {
                   return (
@@ -150,7 +150,7 @@ export default async function Header() {
                             childItems.map((childItem) => {
                               const childName = childItem.title;
                               const childUrl = childItem.url.replace(
-                                "http://abrnextjs.local",
+                                "https://webangon.com/abr",
                                 ""
                               );
                               return (
