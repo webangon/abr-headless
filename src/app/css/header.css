@@ -1,0 +1,215 @@
+.header {
+    width: 100%;
+    background: #fff;
+    display: inline-block;
+    z-index: 9999;
+    /* position: relative;
+    overflow: hidden; */
+}
+.hdrInner {
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    padding: 0 26.30208333333333%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+@media screen and (min-width:1920px) {
+    .header .hdrInner {
+        max-width: 1950px;
+        padding-right: 350px;
+        padding-left: 300px;
+    }
+}
+
+@media screen and (max-width:1919px) {
+    .hdrInner {
+        padding: 0 20%
+    }
+}
+#logo {
+    width: 215px;
+    position: absolute;
+    float: left;
+    left: 15px;
+    top: 13px;
+}
+.navigation {
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.navigation .menu {
+    float: left;
+    overflow: inherit;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.navigation .menu>li {
+    position: relative;
+    font-family: "proximaNova";
+    text-transform: uppercase;
+    line-height: 96px;
+    font-size: 14px;
+}
+.navigation .menu>li a {
+    text-decoration: none;
+    padding: 0 20px;
+    display: block;
+    color: #fff;
+}
+.navigation .menu>li>a {
+    padding: 0;
+    position: relative;
+    color: #0066a0;
+}
+.navigation .menu>li.menu-item-has-children>a {
+    padding-right: 22px
+}
+
+.menu-item-has-children>a::after {
+    width: 0;
+    height: 0;
+    content: "";
+    clear: both;
+    display: block;
+    box-sizing: border-box;
+    border-top: 6px solid #0066a0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    margin: auto;
+    right: 5px;
+    z-index: 9;
+    bottom: 0;
+    top: 0;
+}
+.navigation .sub-menu {
+    width: 250px;
+    background: rgb(45, 105, 199);
+    background: -moz-linear-gradient(left, rgba(45, 105, 199, 1) 0%, rgba(22, 136, 185, 1) 100%);
+    background: -webkit-linear-gradient(left, rgba(45, 105, 199, 1) 0%, rgba(22, 136, 185, 1) 100%);
+    background: linear-gradient(to right, rgba(45, 105, 199, 1) 0%, rgba(22, 136, 185, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d69c7', endColorstr='#1688b9', GradientType=1);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: absolute;
+    visibility: hidden;
+    z-index: -9;
+    opacity: 0;
+    left: 0;
+}
+.navigation .sub-menu {
+    top: 150px
+}
+@media screen and (min-width:1025px) {
+    .navigation .menu {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .navigation li:hover .sub-menu {
+        visibility: visible;
+        z-index: 99;
+        opacity: 1;
+    }
+    .navigation li:hover .sub-menu {
+        top: 100%
+    }
+    .navigation .sub-menu li {
+        width: 100%;
+        padding: 0;
+        line-height: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        text-transform: capitalize;
+    }
+    .navigation .sub-menu li:first-child {
+        border-top: none
+    }
+    .navigation .sub-menu li a {
+        padding: 15px;
+        display: block;
+    }
+    .navigation .sub-menu li a:hover {
+        background: rgb(22, 136, 185, 1);
+        background: -moz-linear-gradient(left, rgba(22, 136, 185, 1) 0%, rgba(45, 105, 199, 1) 100%);
+        background: -webkit-linear-gradient(left, rgba(22, 136, 185, 1) 0%, rgba(45, 105, 199, 1) 100%);
+        background: linear-gradient(to right, rgba(22, 136, 185, 1) 0%, rgba(45, 105, 199, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1688b9', endColorstr='#2d69c7', GradientType=1);
+        color: #fff;
+    }
+}
+.header .commBtn {
+    width: 276px;
+    display: block;
+    min-height: inherit;
+    line-height: 64px;
+    font-size: 0.885em;
+    position: absolute;
+    right: 15px;
+    padding: 0;
+    top: 16px;
+}
+@media screen and (max-width:1919px) {
+    .header .commBtn {
+        width: 210px;
+        line-height: 45px;
+        font-size: 16px;
+        top: 24px;
+    }
+}
+@media screen and (max-width:1199px) {
+    .hdrInner {
+        padding: 0 23%
+    }
+    .navigation .menu>li {
+        font-size: 13px
+    }
+}
+@media screen and (min-width:1025px) {
+    .navigation .menu {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .navigation li:hover .sub-menu {
+        visibility: visible;
+        z-index: 99;
+        opacity: 1;
+    }
+    .navigation li:hover .sub-menu {
+        top: 100%
+    }
+    .navigation .sub-menu li {
+        width: 100%;
+        padding: 0;
+        line-height: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        text-transform: capitalize;
+    }
+    .navigation .sub-menu li:first-child {
+        border-top: none
+    }
+    .navigation .sub-menu li a {
+        padding: 15px;
+        display: block;
+    }
+    .navigation .sub-menu li a:hover {
+        background: rgb(22, 136, 185, 1);
+        background: -moz-linear-gradient(left, rgba(22, 136, 185, 1) 0%, rgba(45, 105, 199, 1) 100%);
+        background: -webkit-linear-gradient(left, rgba(22, 136, 185, 1) 0%, rgba(45, 105, 199, 1) 100%);
+        background: linear-gradient(to right, rgba(22, 136, 185, 1) 0%, rgba(45, 105, 199, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1688b9', endColorstr='#2d69c7', GradientType=1);
+        color: #fff;
+    }
+}

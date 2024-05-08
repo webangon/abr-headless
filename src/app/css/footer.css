@@ -1,0 +1,181 @@
+.footer {
+    width: 100%;
+    position: relative;
+    background-color: #252525;
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+}
+.ftrTop {
+    width: 100%;
+    padding: 52px 15px 57px;
+    box-sizing: border-box;
+}
+.ftrTop2 {
+    width: 100%;
+    padding: 90px 15px 124px;
+    box-sizing: border-box;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.ftrTopMid {
+    width: 100%;
+    position: relative;
+    padding-top: 43px;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    color: #fff;
+}
+.ftrTopMid::before {
+    width: 1px;
+    height: 205px;
+    background-color: #393939;
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    content: "";
+    top: 55px;
+    right: 0;
+    left: 0;
+}
+.ftrTopIn {
+    width: 50%;
+    padding-top: 40px;
+    text-align: center;
+}
+.ftrTopIn p {
+    margin: 0 0 7px;
+    font-family: "proximaNova";
+    line-height: 30px;
+    font-size: 22px;
+}
+.ftrLogo {
+    width: 208px;
+    display: block;
+    margin: 0 auto 30px;
+}
+.ftrTop2 .ftrLogo {
+    width: 312px;
+    margin: 0 auto;
+}
+.footer address {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-family: inherit;
+    line-height: 1.80769;
+    font-size: 1.083em;
+    display: block;
+    color: #fff;
+}
+.footer address span {
+    display: block
+}
+.canadaIcon,
+.united-statesIcon {
+    margin-top: 8px;
+    padding-left: 55px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.united-statesIcon {
+    background-image: url(/images/united-statesIcon.png)
+}
+.canadaIcon {
+    background-image: url(/images/canadaIcon.png)
+}
+.ftrTopIn .canadaIcon,
+.ftrTopIn .united-statesIcon {
+    padding-left: 66px;
+    background-size: 45px auto;
+}
+.ftrBtm {
+    width: 100%;
+    background-color: #1c1c1c;
+    padding: 42px 15px 40px;
+    box-sizing: border-box;
+}
+.ftrSocial {
+    width: 100%;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.ftrSocial li {
+    padding: 0 5px 10px
+}
+.ftrSocial li:nth-child(1) a {
+    background-image: url(/images/facebook@2x-8.png)
+}
+.ftrSocial li:nth-child(2) a {
+    background-image: url(/images/youtube@2x-8.png)
+}
+.ftrSocial li:nth-child(3) a {
+    background-image: url(/images/Linkedin@2x-8.png)
+}
+.ftrSocial a {
+    width: 48px;
+    height: 48px;
+    display: block;
+    line-height: 44px;
+    box-sizing: border-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #0066a0;
+}
+.ftrSocial a:hover {
+    opacity: 0.9;
+}
+.ftrSocial a .fa {
+    display: none
+}
+.ftrBtm p {
+    margin: 0;
+    padding: 19px 0 0;
+    font-family: "proximaNova";
+    font-weight: bold;
+    line-height: 1.375;
+    font-size: 16px;
+    color: #fff;
+}
+.ftrBtm p a {
+    text-decoration: none;
+    color: #fff;
+}
+.ftrBtm p a:hover {
+    color: #ffd800
+}
+@media screen and (max-width:1199px) {
+    .ftrBtm p {
+        font-size: 14px
+    }
+}
+@media screen and (max-width:767px) {
+    .footer address {
+        line-height: 1.2
+    }
+    .footer address span {
+        margin-top: 10px
+    }
+}
