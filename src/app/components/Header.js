@@ -145,7 +145,7 @@ export default async function Header() {
                 if (item.child_items) {
                   return (
                     <>
-                      <li className="menu-item-has-children">
+                      <li key={item.id} className="menu-item-has-children">
                         <Link href={url}>{title}</Link>
                         <ul className={sub_class}>
                           {childItems &&
@@ -156,7 +156,7 @@ export default async function Header() {
                                 ""
                               );
                               return (
-                                <li>
+                                <li key={childItem.id}>
                                   <Link href={childUrl}>{childName}</Link>
                                 </li>
                               );
@@ -167,7 +167,7 @@ export default async function Header() {
                   );
                 } else {
                   return (
-                    <li>
+                    <li key={item.id}>
                       <Link href={url}>{title}</Link>
                     </li>
                   );
