@@ -2,11 +2,13 @@ import React from "react";
 import Link from "next/link";
 import "../css/frontend.min.css";
 import "../css/header.css";
+import Image from 'next/image'
+import Sidebar from './Sidebar'
+
 
 export default async function Header() {
   const res = await fetch(
-    "https://webangon.com/abr/wp-json/menus/v1/menus/primarymenu",
-    { cache: "no-store" }
+    "https://webangon.com/abr/wp-json/menus/v1/menus/primarymenu"
   );
   const data = await res.json();
   //console.log(data);
@@ -143,7 +145,7 @@ export default async function Header() {
                 if (item.child_items) {
                   return (
                     <>
-                      <li key={item.id} className="menu-item-has-children">
+                      <li className="menu-item-has-children">
                         <Link href={url}>{title}</Link>
                         <ul className={sub_class}>
                           {childItems &&
@@ -154,7 +156,7 @@ export default async function Header() {
                                 ""
                               );
                               return (
-                                <li key={childItem.id}>
+                                <li>
                                   <Link href={childUrl}>{childName}</Link>
                                 </li>
                               );
@@ -165,7 +167,7 @@ export default async function Header() {
                   );
                 } else {
                   return (
-                    <li key={item.id}>
+                    <li>
                       <Link href={url}>{title}</Link>
                     </li>
                   );
@@ -176,8 +178,10 @@ export default async function Header() {
           <Link className="commBtn" href="/contact">
             Get started now
           </Link>
+          <Image data-toggle-sidebar="sidebar1" className="mobile-tap" src="/images/mobile-tap.png" alt="Better Stack" width={50} height={50}/>
         </div>
       </header>
+      <Sidebar/> 
     </>
   );
 }
