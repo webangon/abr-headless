@@ -1,8 +1,16 @@
+"use client";
+import { useEffect } from "react";
+import Script from "next/script";
 import React from "react";
 import Link from "next/link";
 import "../css/footer.css";
 
-export default async function Footer() {
+export default function Footer() {
+  useEffect(() => {
+    var script = document.createElement("script");
+    script.src = "/js/script.js";
+    document.head.appendChild(script);
+  }, []);
   return (
     <>
       <footer className="footer">
@@ -62,6 +70,10 @@ export default async function Footer() {
             <Link href="/blog">Blog</Link>
           </p>
         </div>
+        <Script src="/js/splide.min.js"></Script>
+        <Script src="/js/glightbox.js"></Script>
+        <link href="/css/glightbox.css" rel="stylesheet"></link>
+        <link href="/css/splide.min.css" rel="stylesheet"></link>
       </footer>
     </>
   );

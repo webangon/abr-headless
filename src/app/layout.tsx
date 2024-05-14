@@ -7,10 +7,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Amazing Business Results",
   description: "Zoho One Premium Partner",
-  robots: {
-    index: false,
-    follow: false,
-  },  
 };
 
 export default function RootLayout({

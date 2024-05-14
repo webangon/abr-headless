@@ -1400,6 +1400,11 @@ body {
     display: block;
     color: #0066a0;
 }
+@media screen and (max-width:767px) {
+    .section10 h2 {
+        font-size: 2em;
+    } 
+}
 .section12 h2 {
     margin: 0;
     padding: 30px 0;
@@ -1414,6 +1419,12 @@ body {
     line-height: 1.1694;
     font-size: 3.105em;
     color: #fff;
+}
+@media screen and (max-width:767px) {
+    .section12 h2 {
+        font-size: 2em;
+        padding: 0 15px;
+    } 
 }
 .numberIccon {
     width: 96px;

@@ -1,11 +1,9 @@
 import { Metadata } from 'next'
 import { Suspense } from "react";
-import Header from '../.././components/Header'
 import Loading from "../.././loading";
-import Footer from "../.././components/Footer"
  
 export const metadata: Metadata = {
-  title: 'Amazing Business Results',
+  title: 'About',
 }
 
 export default async function Page({ params }: {
@@ -14,12 +12,10 @@ export default async function Page({ params }: {
 
     const query = `
     query {
-        pages(where: {name: "${params.slug}"}) {
-            nodes {
-              title
-              content
-            }
-        }  
+        postBy(slug: "${params.slug}") {
+            title
+            content
+        }   
     }    
     `;
 
@@ -42,23 +38,14 @@ export default async function Page({ params }: {
             return data;
         }
     )
-    const pagedata = res.data.pages.nodes;
-    //console.log(pagedata);
+    const xyz = res.data.postBy.content;
+
     return(
         <>
-        <Header/>
-    <Suspense fallback={<Loading />}>
-      {pagedata.map((item) => {
-        const content = item.content;
-        return(
-            <>
-          <h2>{item.title}</h2>
-          <div dangerouslySetInnerHTML={{__html: content}}></div>            
-            </>
-        );
-      })}
-    </Suspense>
-    <Footer/>
+        <Suspense fallback={<Loading />}>
+        <h1>{res.data.postBy.title}</h1>
+        <div dangerouslySetInnerHTML={{__html: xyz}}></div>
+        </Suspense>
         </>
     ) 
 }
