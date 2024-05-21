@@ -98,6 +98,23 @@
     padding-left: 66px;
     background-size: 45px auto;
 }
+.canadaIcon a,
+.united-statesIcon a {
+    padding-left: 32px;
+    display: inline-block;
+    font-family: "proximaNova";
+    background: url(/images/phone-icon.png) no-repeat left center;
+    background-size: 22px auto;
+    text-decoration: none;
+    line-height: 40px;
+    font-size: 22px;
+    color: #fff;
+}
+.ftrTopIn .canadaIcon a,
+.ftrTopIn .united-statesIcon a {
+    line-height: 45px;
+    font-size: 26px;
+}
 .ftrBtm {
     width: 100%;
     background-color: #1c1c1c;
@@ -171,11 +188,44 @@
         font-size: 14px
     }
 }
+@media screen and (max-width:992px) {
+    .ftrTop2 .ftrLogo {
+        width: 250px
+    }
+    .ftrTopIn p {
+        line-height: 24px;
+        font-size: 18px;
+    }
+    .ftrTopIn .canadaIcon,
+    .ftrTopIn .united-statesIcon {
+        padding-left: 40px;
+        background-size: 30px auto;
+    }
+    .ftrTopIn .canadaIcon a,
+    .ftrTopIn .united-statesIcon a {
+        line-height: 30px;
+        font-size: 20px;
+    }
+}
 @media screen and (max-width:767px) {
     .footer address {
         line-height: 1.2
     }
+    .ftrTopIn {
+        width: 100%
+    }
     .footer address span {
         margin-top: 10px
+    }
+}
+@media screen and (max-width:639px) {
+    .ftrTop2 {
+        padding: 50px 15px
+    }
+    .ftrTop2 .ftrLogo img{
+        max-width: 100%;
+    }
+    .ftrTopMid {
+        padding-top: 0;
     }
 }

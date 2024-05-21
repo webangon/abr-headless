@@ -787,6 +787,9 @@ body {
     max-width: 518px;
     margin: 0 auto;
 }
+@media screen and (max-width:767px) {
+    .inputBox .form-control{max-width: 100%;}
+}
 /*********************	supportPack Styles ***********************/
 .supportPack {
     background-color: #d9e7f6
@@ -1012,7 +1015,7 @@ body {
     box-sizing: border-box;
     justify-content: center;
     position: relative;
-    margin: 0 0 60px;
+    /* margin: 0 0 60px; */
     display: flex;
 }
 .thumbList .thumb::before {
@@ -1024,10 +1027,45 @@ body {
     position: absolute;
     display: block;
     content: "";
-    /* z-index: -1; */
+    z-index: -1;
     left: 50%;
     top: 50%;
 }
+.thumbList{position: relative;}
+.thumbList::after {
+    width: 100vw;
+    height: 150px;
+    background-color: #ca6f19;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: block;
+    content: "";
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+}
+@media screen and (max-width:1024px) {
+    .thumbList::after {
+        display: none;
+    }
+}
+/* .thumbList .thumb.firstItem::before{
+    width: 100vw;
+}
+.thumbList .thumb.lastItem::after{
+    width: 100vw;
+    height: 150px;
+    background-color: #ca6f19;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: block;
+    content: "";
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+} */
 .zoho-ppage.contact-sec .inputBox {
     max-width: 800px;
     margin: 0 auto;
@@ -1455,4 +1493,51 @@ body {
     font-size: 3.895em;
     text-align: center;
     color: #fff;
+}
+.abrBoxHed{
+    color: #025A8C;
+}
+.abrBoxHed:hover{color: #ff6f20;}
+.mngItmHed .elementor-widget-wrap{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.mngItmHed .elementor-element{
+    width: auto;
+    margin: 0;
+}
+.mngItmHed span.icon {
+    width: 58px;
+    height: 58px;
+    background: #025A8C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+@media screen and (max-width:767px){
+    .mngItmHed span{
+        width: 46px;
+        height: 46px;
+        padding: 10px;
+    }
+}
+.mngSec ul li{
+    color: #000;
+    background-image: url(/images/man/age-icon.png);
+    background-repeat: no-repeat;
+    background-position: top 0 left 0;
+    padding-left: 44px;
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+@media screen and (max-width:1023px){
+    .mngSec ul li{
+        background-position: top 4px left 0;
+        padding-left: 30px;
+        font-size: 16px;
+        background-size: 20px;
+    }
 }

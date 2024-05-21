@@ -1,6 +1,8 @@
 import { Metadata } from 'next'
 import { Suspense } from "react";
 import Loading from "../.././loading";
+import Header from '@/app/components/Header';
+import Footer from '@/app/components/Footer';
  
 export const metadata: Metadata = {
   title: 'About',
@@ -38,13 +40,14 @@ export default async function Page({ params }: {
             return data;
         }
     )
-    const xyz = res.data.postBy.content;
+    const pageData = res.data.postBy.content;
 
     return(
         <>
         <Suspense fallback={<Loading />}>
-        <h1>{res.data.postBy.title}</h1>
-        <div dangerouslySetInnerHTML={{__html: xyz}}></div>
+        <Header/>
+        <div dangerouslySetInnerHTML={{__html: pageData}}></div>
+        <Footer/>
         </Suspense>
         </>
     ) 

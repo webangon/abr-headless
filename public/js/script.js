@@ -5,8 +5,11 @@ if (reviewSlider != null) {
     arrows: false,
     pagination: true,
     breakpoints: {
-      640: {
+      1024: {
         perPage: 2,
+      },
+      640: {
+        perPage: 1,
       },
     },
   }).mount();
@@ -27,4 +30,26 @@ if (studySlider != null) {
       },
     },
   }).mount();
+}
+
+// Free Trial Modal
+var freeTrial = document.querySelector("#freeTrial");
+if (freeTrial != null) {
+  var modal = document.getElementById("freeTrial");
+  var btn = document.getElementById("abrModalBtn");
+
+  btn.onclick = function (event) {
+    event.preventDefault();
+    modal.style.display = "block";
+  };
+
+  window.onclick = function (event) {
+    if (
+      event.target != modal &&
+      !modal.contains(event.target) &&
+      event.target != btn
+    ) {
+      modal.style.display = "none";
+    }
+  };
 }

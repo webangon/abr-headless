@@ -21,14 +21,18 @@ export default function Footer() {
           <div className="ftrTopMid">
             <div className="ftrTopIn">
               <p>
-                3030 North Rocky Point Drive W. Suite 150 Tampa, FL 33607 USA
+                3030 North Rocky Point Drive W. Suite
+                <br /> 150 Tampa, FL 33607 USA
               </p>
               <div className="united-statesIcon">
                 <Link href="tel:5617887073">(561) 788-7073</Link>
               </div>
             </div>
             <div className="ftrTopIn">
-              <p>130 King St W, Suite 1900 Toronto, ON M5X 2A2 Canada</p>
+              <p>
+                130 King St W, Suite 1900 Toronto,
+                <br /> ON M5X 2A2 Canada
+              </p>
               <div className="canadaIcon">
                 <Link href="tel:6476943379">(647) 694-3379</Link>
               </div>
@@ -38,36 +42,35 @@ export default function Footer() {
         <div className="ftrBtm">
           <ul className="ftrSocial">
             <li>
-              <a aria-label="facebook" href="#">
+              <Link
+                href="https://www.facebook.com/amazingbusinessresults"
+                target="_blank"
+              >
                 <i className="fa fa-facebook" aria-hidden="true"></i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a aria-label="twitter" href="#>">
-                <i className="fa fa-twitter" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a aria-label="instagram" href="#">
-                <i className="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a aria-label="youtube" href="#">
+              <Link
+                href="https://www.youtube.com/channel/UCCWrfyEe4sIYXpInhR0Y6_A"
+                target="_blank"
+              >
                 <i className="fa fa-youtube-play" aria-hidden="true"></i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a aria-label="linkedin" href="#">
+              <Link
+                href="https://ca.linkedin.com/company/amazing-business-results"
+                target="_blank"
+              >
                 <i className="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
+              </Link>
             </li>
           </ul>
           <p>
             © Amazing Business Results 2013 |
-            <Link href="/terms-of-use">Terms of Use</Link>|
-            <Link href="/privacy-policy">Privacy Policy</Link> |
-            <Link href="/blog">Blog</Link>
+            <Link href="/terms-of-use"> Terms of Use </Link>|
+            <Link href="/privacy-policy"> Privacy Policy </Link> |
+            <Link href="/blog"> Blog </Link>
           </p>
         </div>
         <Script src="/js/splide.min.js"></Script>

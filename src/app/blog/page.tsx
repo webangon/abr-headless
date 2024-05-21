@@ -34,12 +34,12 @@ export default async function Page() {
             return data;
         }
     )
-    const xyz = res.data.posts.edges;
+    const pageData = res.data.posts.edges;
 
     return (
       <>
     <Suspense fallback={<Loading />}>
-      {xyz.map((item:any) => {
+      {pageData.map((item:any) => {
         return(
           <h3 key={item.id}><Link href={`blog/${item.node.slug}`}>{item.node.title}</Link></h3>
         );
