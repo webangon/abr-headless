@@ -1498,12 +1498,11 @@ body {
     color: #025A8C;
 }
 .abrBoxHed:hover{color: #ff6f20;}
-.mngItmHed .elementor-widget-wrap{
-    display: flex;
+.mngItmHed .elementor-element-populated{
     align-items: center;
     gap: 20px;
 }
-.mngItmHed .elementor-element{
+.mngItmHed .elementor-widget-wrap>.elementor-element{
     width: auto;
     margin: 0;
 }
@@ -1523,9 +1522,14 @@ body {
         padding: 10px;
     }
 }
+.mngSec ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 .mngSec ul li{
     color: #000;
-    background-image: url(/images/man/age-icon.png);
+    background-image: url(/images/manage-icon.png);
     background-repeat: no-repeat;
     background-position: top 0 left 0;
     padding-left: 44px;
@@ -1540,4 +1544,32 @@ body {
         font-size: 16px;
         background-size: 20px;
     }
+}
+.abr-btn{
+	position: relative;
+    border-radius: 50px;
+    text-decoration: none;
+    padding: 9px 30px 9px 9px;
+    background: linear-gradient(to bottom, #ffa146 0%, #d85c20 100%);
+    box-shadow: 0 5px 10px rgba(000, 000, 000, 0.25);
+    border: 1px solid #D95D20;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    color: #fff !important;
+    gap: 10px;
+    font-family: 'ProximaNova-Bold';
+    line-height: 1.666;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+.abr-btn svg{
+	height: 33px;
+    line-height: 0;
+    position: relative;
+}
+.abr-btn:hover{
+	background: linear-gradient(to bottom, #d85c20 0%, #ffa146 100%);
+    color: #fff;
 }

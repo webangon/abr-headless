@@ -5,7 +5,7 @@ import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
  
 export const metadata: Metadata = {
-  title: 'About',
+  title: 'Blog - Amazing Business Results',
 }
 
 export default async function Page({ params }: {
