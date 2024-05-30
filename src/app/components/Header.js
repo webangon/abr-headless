@@ -1,7 +1,9 @@
 import React from "react";
+import Image from 'next/image'
 import Link from "next/link";
 import "../css/frontend.min.css";
 import "../css/header.css";
+import Sidebar from './Sidebar'
 
 export default async function Header() {
   const res = await fetch(
@@ -173,10 +175,12 @@ export default async function Header() {
               })}
             </ul>
           </nav>
+          <Image data-toggle-sidebar="sidebar1" className="mobile-tap" src="/images/mobile-tap.png" alt="Better Stack" width={50} height={50}/>
           <Link className="commBtn" href="/contact">
             Get started now
           </Link>
         </div>
+        <Sidebar/> 
       </header>
     </>
   );

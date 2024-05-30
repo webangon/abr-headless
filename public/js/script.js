@@ -1,3 +1,7 @@
+var lightboxVideo = GLightbox({
+  selector: '.glightbox3'
+});
+
 var reviewSlider = document.querySelector("#reviewSlider");
 if (reviewSlider != null) {
   var rvSlider = new Splide("#reviewSlider", {
@@ -53,3 +57,29 @@ if (freeTrial != null) {
     }
   };
 }
+
+
+document.body.classList.remove('sidebar-open')
+var body = document.querySelector('body')
+document.querySelector('.side-close').onclick = function () {
+    body.classList.remove('sidebar-open')
+}
+
+document.querySelector('.mobile-tap').onclick = function () {
+    body.classList.add('sidebar-open')
+}
+
+document.querySelector('.menu .plus').onclick = function () {
+    this.parentNode.nextSibling.classList.toggle('show-sub')
+}
+
+var mobile_expand = document.querySelectorAll('.mobile-navigation .is-parent')
+
+mobile_expand.forEach((item, index) => {
+    let _parent = item.querySelector(".plus");
+    _parent.onclick = function () {
+        this.parentNode.nextSibling.classList.toggle('show-sub')
+    }
+
+})
+
