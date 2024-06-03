@@ -83,3 +83,8 @@ mobile_expand.forEach((item, index) => {
 
 })
 
+function show_logo(e) {
+  e.nextElementSibling.classList.toggle("visible");
+  var body = document.body;
+  body.classList.toggle("blur");
+} 
