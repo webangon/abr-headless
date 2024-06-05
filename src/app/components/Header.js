@@ -11,7 +11,7 @@ export default async function Header() {
     { cache: "no-store" }
   );
   const data = await res.json();
-  //console.log(data);
+ 
   return (
     <>
       <header className="header">
