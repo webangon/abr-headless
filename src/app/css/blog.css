@@ -1,0 +1,84 @@
+*, :after,:before {
+    box-sizing: border-box;
+}
+.blog-wrapper .text-primary{
+    margin: 0;
+    color: black;  
+    text-align: center;
+    margin-bottom: 30px;    
+}
+.blog-wrapper{
+    background: #E7E7E7;
+}
+.blog-wrapper> .inner {
+    max-width: 1230px;
+    margin: 0px auto;
+      padding: 34px 0px;
+}
+.blog-wrapper .list-group-item{
+     width: 33.33%;
+  float:left;
+  padding:15px;
+}
+.ab-noverflow:after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+.blog-wrapper .thumbwrap img{
+  width:100%;
+  height:auto;
+  vertical-align: middle;
+}
+.blog-wrapper .excerpt-wrap{
+    padding: 39px 38px 54px;
+    background: white;
+}
+.blog-wrapper .excerpt-wrap h3{
+    margin: 0;
+    margin-bottom: 12px;  
+}
+.blog-wrapper .excerpt-wrap h3 a{
+    text-decoration: none;
+    color: black; 
+}
+.blog-wrapper .post-date {
+    font-size: 15px;
+}
+.blog-wrapper .post-excerpt{
+    color: black;
+    font-size: 17px;
+}
+.blog-wrapper .btn-more {
+    background: #f5ae2e;
+    background: -moz-linear-gradient(top, #f5ae2e 0%, #ee4f01 100%);
+    background: -webkit-linear-gradient(top, #f5ae2e 0%, #ee4f01 100%);
+    background: linear-gradient(to bottom, #f5ae2e 0%, #ee4f01 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5ae2e', endColorstr='#ee4f01', GradientType=0);
+    color: #fff;
+    padding: 13px 34px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 13px;
+      display: inline-block;
+}
+.blog-wrapper .pagination{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    color: black;
+}
+.blog-wrapper .pagination li{
+      cursor: pointer;
+}
+
+@media screen and (max-width:787px) {
+
+    .blog-wrapper .list-group-item{
+        width: 100%;
+   }
+
+}

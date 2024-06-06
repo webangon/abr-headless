@@ -137,7 +137,7 @@ export default async function Header() {
           </Link>
           <nav className="navigation">
             <ul className="menu">
-              {data.items.map((item) => {
+              {data.items.map((item,uniq) => {
                 const title = item.title;
                 const childItems = item.child_items;
                 const url = item.url.replace("https://webangon.com/abr", "");
@@ -145,18 +145,18 @@ export default async function Header() {
                 if (item.child_items) {
                   return (
                     <>
-                      <li key={item.id} className="menu-item-has-children">
+                      <li key={uniq} className="menu-item-has-children">
                         <Link href={url}>{title}</Link>
-                        <ul className={sub_class}>
+                        <ul key={Math.random()} className={sub_class}>
                           {childItems &&
-                            childItems.map((childItem) => {
+                            childItems.map((childItem,index) => {
                               const childName = childItem.title;
                               const childUrl = childItem.url.replace(
                                 "https://webangon.com/abr",
                                 ""
                               );
                               return (
-                                <li key={childItem.id}>
+                                <li key={index}>
                                   <Link href={childUrl}>{childName}</Link>
                                 </li>
                               );
@@ -167,7 +167,7 @@ export default async function Header() {
                   );
                 } else {
                   return (
-                    <li key={item.id}>
+                    <li key={uniq}>
                       <Link href={url}>{title}</Link>
                     </li>
                   );

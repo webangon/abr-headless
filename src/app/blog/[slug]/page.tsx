@@ -1,6 +1,4 @@
 import { Metadata } from 'next'
-import { Suspense } from "react";
-import Loading from "../.././loading";
 import Header from '@/app/components/Header';
 import Footer from '@/app/components/Footer';
  
@@ -44,11 +42,10 @@ export default async function Page({ params }: {
 
     return(
         <>
-        <Suspense fallback={<Loading />}>
         <Header/>
         <div dangerouslySetInnerHTML={{__html: pageData}}></div>
         <Footer/>
-        </Suspense>
+
         </>
     ) 
 }

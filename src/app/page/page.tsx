@@ -1,7 +1,4 @@
 import Link from "next/link";
-import { Suspense } from "react";
-import Loading from ".././loading";
-
 export default async function Page() {
     const query = `
         query {
@@ -38,13 +35,12 @@ export default async function Page() {
 
     return (
       <>
-    <Suspense fallback={<Loading />}>
+
       {pagedata.map((item:any) => {
         return(
           <h3 key={item.id}><Link href={`blog/${item.node.slug}`}>{item.node.title}</Link></h3>
         );
       })}
-</Suspense>
       </>
     );
   }

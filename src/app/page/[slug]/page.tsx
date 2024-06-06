@@ -1,7 +1,5 @@
 import { Metadata } from 'next'
-import { Suspense } from "react";
 import Header from '../.././components/Header'
-import Loading from "../.././loading";
 import Footer from "../.././components/Footer"
  
 export const metadata: Metadata = {
@@ -47,7 +45,7 @@ export default async function Page({ params }: {
     return(
         <>
         <Header/>
-    <Suspense fallback={<Loading />}>
+
       {pagedata.map((item:any) => {
         const content = item.content;
         return(
@@ -57,7 +55,6 @@ export default async function Page({ params }: {
             </>
         );
       })}
-    </Suspense>
     <Footer/>
         </>
     ) 
