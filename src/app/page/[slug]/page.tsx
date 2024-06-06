@@ -41,7 +41,6 @@ export default async function Page({ params }: {
         }
     )
     const pagedata = res.data.pages.nodes;
-    //console.log(pagedata);
     return(
         <>
         <Header/>

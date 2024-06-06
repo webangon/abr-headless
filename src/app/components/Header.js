@@ -135,46 +135,46 @@ export default async function Header() {
               ></path>
             </svg>
           </Link>
-          <nav className="navigation">
-            <ul className="menu">
-              {data.items.map((item,uniq) => {
-                const title = item.title;
-                const childItems = item.child_items;
-                const url = item.url.replace("https://webangon.com/abr", "");
-                const sub_class = childItems ? "sub-menu" : "no-sub";
-                if (item.child_items) {
-                  return (
-                    <>
-                      <li key={uniq} className="menu-item-has-children">
-                        <Link href={url}>{title}</Link>
-                        <ul key={Math.random()} className={sub_class}>
-                          {childItems &&
-                            childItems.map((childItem,index) => {
-                              const childName = childItem.title;
-                              const childUrl = childItem.url.replace(
-                                "https://webangon.com/abr",
-                                ""
-                              );
-                              return (
-                                <li key={index}>
-                                  <Link href={childUrl}>{childName}</Link>
-                                </li>
-                              );
-                            })}
-                        </ul>
-                      </li>
-                    </>
-                  );
-                } else {
-                  return (
-                    <li key={uniq}>
-                      <Link href={url}>{title}</Link>
-                    </li>
-                  );
-                }
-              })}
+          <nav  className="navigation">
+    <ul  className="menu">
+        <li><Link href="/page/home">Home</Link></li>
+        <li  className="menu-item-has-children"><Link href="/page/zoho-development-services">Zoho Development Services</Link>
+            <ul  className="sub-menu">
+                <li><Link href="/page/zoho-partner">Zoho Partner</Link></li>
+                <li><Link href="/page/zoho-consultant">Zoho Consultant</Link></li>
+                <li><Link href="/page/zoho-crm-customization">Zoho CRM Customization</Link></li>
+                <li><Link href="/page/zoho-crm-extensions">Zoho CRM Extensions</Link></li>
+                <li><Link href="/page/business-automation">Business Automation</Link></li>
+                <li><Link href="https://www.medicrm.ai/">MEDICRM.AI</Link></li>
+                <li><Link href="/page/sales-engine-automation">Sales Engine Automation</Link></li>
+                <li><Link href="/page/diy">Diy</Link></li>
+                <li><Link href="/page/zoho-customization">Zoho Customization</Link></li>
+                <li><Link href="/page/zoho-for-real-estate">Zoho For Real Estate</Link></li>
+                <li><Link href="/page/new-homepage">New Homepage</Link></li>
+                <li><Link href="/blog">Blog</Link></li>
             </ul>
-          </nav>
+        </li>
+        <li  className="menu-item-has-children"><Link href="/page/zoho-training">Zoho Training</Link>
+            <ul  className="sub-menu">
+                <li><Link href="/page/zoho-crm-course">Zoho CRM Training</Link></li>
+                <li><Link href="https://www.liorizik.com/courses/live-training-deluge-scripting-for-non-developers?_ga=2.157498354.999777575.1714282339-837017896.1712048496">Zoho Deluge Training</Link></li>
+                <li><Link href="https://www.liorizik.com/courses/Zoho-CRM-Automation-Workshop?_ga=2.186340193.999777575.1714282339-837017896.1712048496">Zoho CRM Automation Training</Link></li>
+                <li><Link href="/page/zoho-one-2023-applications">Zoho One 2023 Applications</Link></li>
+                <li><Link href="https://www.liorizik.com/courses/the-complete-zoho-forms-course-2021-edition?_ga=2.186340193.999777575.1714282339-837017896.1712048496">Zoho Forms Training</Link></li>
+                <li><Link href="https://www.liorizik.com/?_ga=2.181673967.999777575.1714282339-837017896.1712048496">More Zoho Courses</Link></li>
+            </ul>
+        </li>
+        <li  className="menu-item-has-children"><Link href="/page/recommended">Recommended</Link>
+            <ul  className="sub-menu">
+                <li><Link href="https://www.youtube.com/c/ZOHOversity/videos">Videos</Link></li>
+                <li><Link href="https://forms.amazingbusinessresults.com/amazingbusinessresults/form/ZohoCRMPreventionSupportPackage/formperma/fjmgxaXUy_U4_ePbvsOqUF_TNwVKbBXV8gum6D87YDk?_ga=2.160718837.999777575.1714282339-837017896.1712048496">Zoho CRM Support, Prevention &amp; Updates Package</Link></li>
+                <li><Link href="https://forms.amazingbusinessresults.com/amazingbusinessresults/form/ZohoOneEmergencySupportPackage/formperma/tMUgGaZuaBJjNWd5MJGiB1xtTFHwDxSp4NAu8dFJzLY?_ga=2.89288787.999777575.1714282339-837017896.1712048496">Zoho One Emergency Support Package</Link></li>
+            </ul>
+        </li>
+        <li><Link href="/page/about">About</Link></li>
+        <li><Link href="/page/contact">Contact</Link></li>
+    </ul>
+</nav>
           <Image data-toggle-sidebar="sidebar1" className="mobile-tap" src="/images/mobile-tap.png" alt="Better Stack" width={50} height={50}/>
           <Link className="commBtn" href="/contact">
             Get started now
