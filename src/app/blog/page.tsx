@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
 // import Posts from '../components/Posts';
 // import Pagination from '../components/Pagination';
 // import axios from 'axios';
@@ -54,4 +54,4 @@ const Paginated = () => {
   );
 };
 
-export default Paginated;
+//export default Paginated;
