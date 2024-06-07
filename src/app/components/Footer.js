@@ -68,8 +68,8 @@ export default function Footer() {
           </ul>
           <p>
             © Amazing Business Results 2013 |
-            <Link href="/terms-of-use"> Terms of Use </Link>|
-            <Link href="/privacy-policy"> Privacy Policy </Link> |
+            <Link href="/page/terms-of-use"> Terms of Use </Link>|
+            <Link href="/page/privacy-policy"> Privacy Policy </Link> |
             <Link href="/blog"> Blog </Link>
           </p>
         </div>
