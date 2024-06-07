@@ -8,7 +8,7 @@ import Sidebar from './Sidebar'
 export default async function Header() {
   const res = await fetch(
     "https://webangon.com/abr/wp-json/menus/v1/menus/primarymenu",
-    { cache: "no-store" }
+    { cache: "force-cache" }
   );
   const data = await res.json();
  
