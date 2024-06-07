@@ -15,7 +15,7 @@ const Posts = ({ posts, loading }) => {
               
               <div className='thumbwrap' dangerouslySetInnerHTML={{__html:post.thumb}}></div>
               <div className='excerpt-wrap'>
-                <h3><Link href={`blog/${post.slug}`}>{post.name}</Link></h3>
+                <h3><Link href={`blog/${post.slug}`}><span className='thumbwrap' dangerouslySetInnerHTML={{__html:post.name}}></span></Link></h3>
                 <span className='post-date'>{post.date}</span>
                 <p className='post-excerpt'>{post.excerpt}</p>
                 <Link className='btn-more' href={`blog/${post.slug}`}>READ MORE</Link>

@@ -19,6 +19,11 @@
      width: 33.33%;
   float:left;
   padding:15px;
+  
+}
+.blog-wrapper .list-group-item .inner{
+    min-height: 646px;
+    background: white;
 }
 .ab-noverflow:after {
     content: " ";
@@ -32,7 +37,7 @@
 }
 .blog-wrapper .excerpt-wrap{
     padding: 39px 38px 54px;
-    background: white;
+    
 }
 .blog-wrapper .excerpt-wrap h3{
     margin: 0;
