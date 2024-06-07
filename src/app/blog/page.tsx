@@ -37,7 +37,7 @@ const Paginated = () => {
 
   return (
     <>
-    <Header />
+    {/* <Header /> */}
     <div className='blog-wrapper'>
       <div className='inner ab-noverflow'>
       <h1 className='text-primary mb-3'>Latest Must Reads</h1>
