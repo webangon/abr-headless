@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Posts from '../components/Posts';
 import Pagination from '../components/Pagination';
 import axios from 'axios';
-import Footer from '../components/Footer'
-import Header from '../components/Header'
+// import Footer from '../components/Footer'
+// import Header from '../components/Header'
 import "../css/blog.css";
 
 const Paginated = () => {
