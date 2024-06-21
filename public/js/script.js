@@ -36,6 +36,23 @@ if (studySlider != null) {
   }).mount();
 }
 
+var stepSlider = document.querySelector("#stepSliderBox");
+if (stepSlider != null) {
+  var stepSlider = new Splide("#stepSliderBox", {
+    perPage: 1,
+    arrows: true,
+    pagination: false,
+    breakpoints: {
+      640: {
+        perPage: 1,
+      },
+      480: {
+        perPage: 1,
+      },
+    },
+  }).mount();
+}
+
 // Free Trial Modal
 var freeTrial = document.querySelector("#freeTrial");
 if (freeTrial != null) {

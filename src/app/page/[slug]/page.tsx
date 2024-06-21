@@ -3,10 +3,6 @@ import Header from '../.././components/Header'
 import Footer from "../.././components/Footer"
 import axios from 'axios';
 
-export const metadata: Metadata = {
-  title: 'Amazing Business Results',
-}
-
 export default async function Page({ params }: {
     params: { slug: string };
 }) {
@@ -42,21 +38,25 @@ export default async function Page({ params }: {
         }
     )
 
-    const metadata = await axios.get('https://webangon.com/abr/wp-json/rankmath/v1/getHead?url=https://webangon.com/abr/page/about/')
-    console.log(metadata.data.head);
+    //const metadata = await axios.get('https://webangon.com/abr/wp-json/rankmath/v1/getHead?url=https://webangon.com/abr/page/about/')
+    //console.log(metadata.data.head);
+    //const seo_title = metadata.data.head;
     const pagedata = res.data.pages.nodes;
-    return(
+    //document.getElementsByTagName('head')[0].appendChild(seo_title);
+    return (
         <>
-        <Header/>
-      {pagedata.map((item:any) => {
-        const content = item.content;
-        return(
-            <>
-          <div dangerouslySetInnerHTML={{__html: content}}></div>            
-            </>
-        );
-      })}
-    <Footer/>
+            {/*Show seo data here {seo_title} */}
+
+            <Header />
+            {pagedata.map((item: any) => {
+                const content = item.content;
+                return (
+                    <>
+                        <div dangerouslySetInnerHTML={{ __html: content }}></div>
+                    </>
+                );
+            })}
+            <Footer />
         </>
-    ) 
+    )
 }
