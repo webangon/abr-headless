@@ -11,7 +11,7 @@ export default async function Frontpage() {
       }  
   }    
   `;
-  const res = await fetch("https://webangon.com/abr/graphql", {
+  const res = await fetch(`${process.env.WP_SITE}/graphql`, {
     method: "POST",
     cache: "no-store",
     headers: {

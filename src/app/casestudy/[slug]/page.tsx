@@ -2,9 +2,24 @@ import { Metadata } from 'next'
 import { Suspense } from "react";
 import Footer from '../.././components/Footer'
 import Header from '../.././components/Header'
+import axios from 'axios';
 
-export const metadata: Metadata = {
-    title: 'Case Study',
+export async function generateMetadata({ params }: {
+    params: { slug: string };
+}) {
+    const metadata = await axios.get(`${process.env.WP_SITE}/wp-json/wp/v2/uts_seo_data`,
+        { params: { type: 'casestudy',slug:params.slug } }
+    )
+    console.log(metadata.data);
+    return {
+        title: metadata.data.title,
+        description:metadata.data.description,
+        keywords:metadata.data.focus,
+        robots: {
+            index: metadata.data.robot_index,
+            follow: metadata.data.robot_follow,
+        },        
+    }
 }
 
 export default async function Page({ params }: {

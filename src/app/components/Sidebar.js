@@ -9,7 +9,7 @@ export default function Sidebar() {
                     <span className="side-close">+</span>
                     <nav className="mobile-navigation">
                         <ul className="menu">
-                            <li><Link href="/page/home">Home</Link></li>
+                            <li><Link href="/home">Home</Link></li>
                             <li className="is-parent"><Link href="/page/zoho-development-services">Zoho Development Services<span className="plus">+</span></Link>
                                 <ul className="sub-menu">
                                     <li><Link href="/page/zoho-partner">Zoho Partner</Link></li>

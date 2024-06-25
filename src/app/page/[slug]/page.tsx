@@ -3,6 +3,24 @@ import Header from '../.././components/Header'
 import Footer from "../.././components/Footer"
 import axios from 'axios';
 
+export async function generateMetadata({ params }: {
+    params: { slug: string };
+}) {
+    const metadata = await axios.get(`${process.env.WP_SITE}/wp-json/wp/v2/uts_seo_data`,
+        { params: { type: 'page',slug:'page/'+params.slug } }
+    )
+    //console.log(metadata.data);
+    return {
+        title: metadata.data.title,
+        description:metadata.data.description,
+        keywords:metadata.data.focus,
+        robots: {
+            index: metadata.data.robot_index,
+            follow: metadata.data.robot_follow,
+        },        
+    }
+}
+
 export default async function Page({ params }: {
     params: { slug: string };
 }) {
@@ -38,11 +56,8 @@ export default async function Page({ params }: {
         }
     )
 
-    //const metadata = await axios.get('https://webangon.com/abr/wp-json/rankmath/v1/getHead?url=https://webangon.com/abr/page/about/')
-    //console.log(metadata.data.head);
-    //const seo_title = metadata.data.head;
     const pagedata = res.data.pages.nodes;
-    //document.getElementsByTagName('head')[0].appendChild(seo_title);
+
     return (
         <>
             {/*Show seo data here {seo_title} */}
