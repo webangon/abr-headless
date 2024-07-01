@@ -7,9 +7,8 @@ export async function generateMetadata({ params }: {
     params: { slug: string };
 }) {
     const metadata = await axios.get(`${process.env.WP_SITE}/wp-json/wp/v2/uts_seo_data`,
-        { params: { type: 'page',slug:'page/'+params.slug } }
+        { params: { type: 'page',slug:params.slug } }
     )
-    console.log(metadata.data);
     return {
         title: metadata.data.title,
         description:metadata.data.description,

@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: {
     const metadata = await axios.get(`${process.env.WP_SITE}/wp-json/wp/v2/uts_seo_data`,
         { params: { type: 'casestudy',slug:params.slug } }
     )
-    console.log(metadata.data);
+    
     return {
         title: metadata.data.title,
         description:metadata.data.description,
